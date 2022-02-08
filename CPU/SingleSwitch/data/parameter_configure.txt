@@ -1,0 +1,30 @@
+#random seed
+srand=1000
+
+#####	 read traffic file    #####
+#!!! Provide the pcap file name
+pcap_file_name=data/sample.pcap
+pkt_num=800000
+
+#####    dispatch traffic     #####
+#!!! Choose a load balancing scheme
+# 0:per flow
+# 1:per packet
+# 2:flowlet
+lb_scheme=2
+
+# flowlet algorithm
+# 1001:BurstBalaner
+# 1002:Letflow
+flowlet_algo=1001
+
+hash_table_rows=512
+hash_table_depth=8
+
+#units in nanoseconds
+#flowlet threshold
+delta=10000
+
+link_delay_range_majority=10000		
+link_delay_range_minority=100000		
+link_delay_majority_percentage=0.8
